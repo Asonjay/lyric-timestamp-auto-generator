@@ -53,7 +53,9 @@ def write_lyric(song_name, lyric):
 def download_song(song_id, song_name):
     print('### Downloading song: {}'.format(song_name))
     headers = {
-        'User-Agent':'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.132 Safari/537.36 QIHU 360SE'
+        'User-Agent':'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.132 Safari/537.36 QIHU 360SE',
+        'Refer':'http://music.163.com',
+        'Host':'music.163.com'
     }
     url = 'http://music.163.com/song/media/outer/url?id=' + str(song_id) + '.mp3'
     location = requests.head(url, headers=headers, allow_redirects=False).headers['location']
@@ -70,6 +72,6 @@ if __name__ == '__main__':
         lyric = get_lyric(info[1])
         write_lyric(info[0], lyric)
     # Download songs
-    #for info in singer_infos:
-    #    download_song(info[1], info[0])
+    # for info in singer_infos:
+    #     download_song(info[1], info[0])
         
