@@ -1,9 +1,11 @@
 # Credit: https://zhuanlan.zhihu.com/p/32715324
 
+from email import header
 import requests
 from bs4 import BeautifulSoup
 import json
 import re
+import urllib
 
 def get_html(url):
     headers = {
@@ -18,20 +20,20 @@ def get_html(url):
     except:
         print('request error')
         pass
+  
     
 def get_singer_info(html):
     soup = BeautifulSoup(html, 'lxml')
-    with open('soup.txt', 'w', encoding='utf-8') as f:
-        f.write(soup.text)
     links = soup.find('ul', class_='f-hide').find_all('a')
     song_IDs = []
     song_names = []
     for link in links:
         ID = link.get('href').split('=')[-1]
-        name = link.get_text()
+        name = re.sub(r'[^a-zA-Z0-9@$&:()]', ' ', link.get_text())
         song_IDs.append(ID)
         song_names.append(name)
     return zip(song_names, song_IDs)
+
 
 def get_lyric(song_id):
     url = 'http://music.163.com/api/song/lyric?id=' + str(song_id) + '&lv=1&kv=1&tv=-1'
@@ -42,20 +44,32 @@ def get_lyric(song_id):
     #unsync_lyric = re.sub(regex, '', lyric).strip()
     return lyric
 
+
 def write_lyric(song_name, lyric):
-    print('### Writing song: {}'.format(song_name))
-    with open('{}.txt'.format(song_name), 'a', encoding='utf-8') as f:
+    print('### Writing lyric: {}'.format(song_name))
+    with open('lyrics\\{}.txt'.format(song_name), 'a', encoding='utf-8') as f:
         f.write(lyric)
 
+def download_song(song_id, song_name):
+    print('### Downloading song: {}'.format(song_name))
+    headers = {
+        'User-Agent':'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.132 Safari/537.36 QIHU 360SE'
+    }
+    url = 'http://music.163.com/song/media/outer/url?id=' + str(song_id) + '.mp3'
+    location = requests.head(url, headers=headers, allow_redirects=False).headers['location']
+    print(location)
+    
+    
 if __name__ == '__main__':
     #singer_id = input('Input singer ID: (TS: 44266)')
     url = 'http://music.163.com/artist?id={}'.format(44266)
     html = get_html(url)
-    with open('html.txt', 'w', encoding='utf-8') as f:
-        f.write(html)
     singer_infos = get_singer_info(html)
+    # Get lyrics
     for info in singer_infos:
         lyric = get_lyric(info[1])
         write_lyric(info[0], lyric)
-    
+    # Download songs
+    #for info in singer_infos:
+    #    download_song(info[1], info[0])
         
