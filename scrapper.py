@@ -21,7 +21,9 @@ def get_html(url):
     
 def get_singer_info(html):
     soup = BeautifulSoup(html, 'lxml')
-    links = soup.find('ul', class_='f_hide').find_all('a')
+    with open('soup.txt', 'w', encoding='utf-8') as f:
+        f.write(soup.text)
+    links = soup.find('ul', class_='f-hide').find_all('a')
     song_IDs = []
     song_names = []
     for link in links:
@@ -46,10 +48,11 @@ def write_lyric(song_name, lyric):
         f.write(lyric)
 
 if __name__ == '__main__':
-    singer_id = input('Input singer ID: (TS: 44266)')
-    url = 'http://music.163.com/artist?id={}'.format(singer_id)
-    print
+    #singer_id = input('Input singer ID: (TS: 44266)')
+    url = 'http://music.163.com/artist?id={}'.format(44266)
     html = get_html(url)
+    with open('html.txt', 'w', encoding='utf-8') as f:
+        f.write(html)
     singer_infos = get_singer_info(html)
     for info in singer_infos:
         lyric = get_lyric(info[1])
