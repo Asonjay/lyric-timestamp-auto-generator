@@ -7,6 +7,7 @@ import json
 import re
 import urllib
 
+
 def get_html(url):
     headers = {
         'User-Agent':'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.132 Safari/537.36 QIHU 360SE',
@@ -20,7 +21,7 @@ def get_html(url):
     except:
         print('request error')
         pass
-  
+
     
 def get_singer_info(html):
     soup = BeautifulSoup(html, 'lxml')
@@ -64,7 +65,7 @@ def download_song(song_id, song_name):
     
 if __name__ == '__main__':
     #singer_id = input('Input singer ID: (TS: 44266)')
-    url = 'http://music.163.com/artist?id={}'.format(44266)
+    url = 'http://music.163.com/artist?id={}'.format(35347)
     html = get_html(url)
     singer_infos = get_singer_info(html)
     # Get lyrics
