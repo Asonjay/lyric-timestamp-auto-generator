@@ -48,7 +48,7 @@ def get_lyric(song_id):
 
 def write_lyric(song_name, lyric):
     print('### Writing lyric: {}'.format(song_name))
-    with open('lyrics\\{}.txt'.format(song_name), 'a', encoding='utf-8') as f:
+    with open('lyrics_raw\\{}.txt'.format(song_name), 'a', encoding='utf-8') as f:
         f.write(lyric)
 
 def download_song(song_id, song_name):
@@ -65,6 +65,7 @@ def download_song(song_id, song_name):
     
 if __name__ == '__main__':
     #singer_id = input('Input singer ID: (TS: 44266)')
+    # Johnny Cash: 35347
     url = 'http://music.163.com/artist?id={}'.format(35347)
     html = get_html(url)
     singer_infos = get_singer_info(html)
