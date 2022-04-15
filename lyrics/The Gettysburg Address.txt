@@ -1,15 +1,11 @@
-[00:00.050]
 [00:00.100]“Four score and seven years ago”, so began the message “
 [00:05.020]of a war-weary president, Abraham Lincoln.
 [00:08.820]A message written on the back of an envelope, on a train,
-[00:10.720]
 [00:12.200]on the way to dedicate a battlefield,
 [00:15.620]where men from the north and south had died at Gettysburg Pennsylvania.
-[00:21.280]
 [00:24.740]"Four score and seven years ago our forefathers brought forth on this continent
 [00:30.780]a new nation, conceived in liberty
 [00:34.500]and dedicated to the proposition that all men are created equal.
-[00:40.340]
 [00:41.160]Now we're engaged in a great civil war,
 [00:44.160]testing whether that nation, or any nation so conceived
 [00:49.060]and so dedicated, can long endure.
@@ -33,4 +29,4 @@
 [02:12.500]that this nation, under God, shall have a new birth of freedom
 [02:19.220]and that government of the people, by the people,  for the people,
 [02:27.980]shall not perish from the earth.
-[02:35.180]
+
