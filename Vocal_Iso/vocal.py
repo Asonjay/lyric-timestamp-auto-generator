@@ -8,6 +8,7 @@ import librosa
 import soundfile
 import librosa.display
 import os
+import time
 
 """
 Code & Usage: 
@@ -20,8 +21,11 @@ if __name__ == '__main__':
 
     load_dir = "../Model_Data/songs/vocal_reg/"
     out_dir = "../Model_Data/songs/vocal_iso/"
+    prog_start = time.time()
     for file in os.scandir(load_dir):
+        file_start = time.time()
         # upped duration so we dont get any clipping, we start with load then compute the spectrogram magnitude and phase
+        print("Loading... ", file.path)
         y, sr = librosa.load(file.path, duration=125)
         S_full, phase = librosa.magphase(librosa.stft(y))
 
@@ -46,7 +50,15 @@ if __name__ == '__main__':
         S_foreground = mask_v * S_full
         S_background = mask_i * S_full
         foreground_audio = librosa.istft(S_foreground)
-        soundfile.write(out_dir+file.name, foreground_audio, sr)
+        file_out = out_dir + file.name
+        soundfile.write(file_out, foreground_audio, sr)
+        file_stop = time.time()
+        print("Wrote out to: ", file_out)
+        print("In(seconds): ", file_stop-file_start)
+        print("----------------------------")
+
+    prog_end = time.time()
+    print("Total Time(seconds): ", prog_end-prog_start)
 
         
     """
