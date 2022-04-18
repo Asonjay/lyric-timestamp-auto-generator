@@ -1,11 +1,13 @@
 #vocal.py
 #author: JDW 3/6/22
 
+import argparse
 import numpy as np
 import matplotlib.pyplot as plt
 import librosa
 import soundfile
 import librosa.display
+import os
 
 """
 Code & Usage: 
@@ -16,7 +18,40 @@ Code & Usage:
 
 if __name__ == '__main__':
 
-    # load then compute the spectrogram magnitude and phase
+    load_dir = "../Model_Data/songs/vocal_reg/"
+    out_dir = "../Model_Data/songs/vocal_iso/"
+    for file in os.scandir(load_dir):
+        # upped duration so we dont get any clipping, we start with load then compute the spectrogram magnitude and phase
+        y, sr = librosa.load(file.path, duration=125)
+        S_full, phase = librosa.magphase(librosa.stft(y))
+
+        S_filter = librosa.decompose.nn_filter(S_full, aggregate=np.median, metric='cosine', width=int(librosa.time_to_frames(2, sr=sr)))
+
+        S_filter = np.minimum(S_full, S_filter)
+
+        margin_i, margin_v = 2, 10
+        power = 2
+
+        mask_i = librosa.util.softmask(S_filter,
+                               margin_i * (S_full - S_filter),
+                               power=power)
+
+        mask_v = librosa.util.softmask(S_full - S_filter,
+                               margin_v * S_filter,
+                               power=power)
+
+        # Once we have the masks, simply multiply them with the input spectrum
+        # to separate the components
+
+        S_foreground = mask_v * S_full
+        S_background = mask_i * S_full
+        foreground_audio = librosa.istft(S_foreground)
+        soundfile.write(out_dir+file.name, foreground_audio, sr)
+
+        
+    """
+    HELPER CODE, for dev reference:
+
     y, sr = librosa.load('data/sample/countryRoads.wav', duration=120)
     S_full, phase = librosa.magphase(librosa.stft(y))
 
@@ -41,7 +76,7 @@ if __name__ == '__main__':
     S_foreground = mask_v * S_full
     S_background = mask_i * S_full
 
-    """ This code will produce plots based on the seperated vocals:"""
+    # This code will produce plots based on the seperated vocals:
 
     idx = slice(*librosa.time_to_frames([15, 20], sr=sr))
     plt.figure(figsize=(12, 8))
@@ -67,5 +102,5 @@ if __name__ == '__main__':
 
     foreground_audio = librosa.istft(S_foreground)
     soundfile.write('data/results/foreground.WAV', foreground_audio, sr)
-
+    """
     
