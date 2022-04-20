@@ -1,4 +1,4 @@
-[00:00.100]“Four score and seven years ago”, so began the message “
+[00:00.100]Four score and seven years ago, so began the message
 [00:05.020]of a war-weary president, Abraham Lincoln.
 [00:08.820]A message written on the back of an envelope, on a train,
 [00:12.200]on the way to dedicate a battlefield,
@@ -29,4 +29,3 @@
 [02:12.500]that this nation, under God, shall have a new birth of freedom
 [02:19.220]and that government of the people, by the people,  for the people,
 [02:27.980]shall not perish from the earth.
-

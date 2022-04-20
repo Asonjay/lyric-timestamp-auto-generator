@@ -1,3 +1,5 @@
+# scrapper.py
+# Author: Jason Xu
 # Credit: https://zhuanlan.zhihu.com/p/32715324
 
 from email import header
@@ -5,7 +7,6 @@ import requests
 from bs4 import BeautifulSoup
 import json
 import re
-import urllib
 
 
 def get_html(url):
@@ -64,8 +65,7 @@ def download_song(song_id, song_name):
     
     
 if __name__ == '__main__':
-    #singer_id = input('Input singer ID: (TS: 44266)')
-    # Johnny Cash: 35347
+    # Hardcode Id to 'Johnny Cash: 35347'
     url = 'http://music.163.com/artist?id={}'.format(35347)
     html = get_html(url)
     singer_infos = get_singer_info(html)
@@ -73,7 +73,7 @@ if __name__ == '__main__':
     for info in singer_infos:
         lyric = get_lyric(info[1])
         write_lyric(info[0], lyric)
-    # Download songs
+    # Download songs / this is not gonna work because copyright issues
     # for info in singer_infos:
     #     download_song(info[1], info[0])
         
