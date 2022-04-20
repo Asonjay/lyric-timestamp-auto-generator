@@ -38,8 +38,8 @@ def zip_label_wav():
     label_list = []
     for filename in os.scandir(reg_dir):
         print("Loading file:", filename.name)
-        reg_wav, _ = librosa.load(filename.path, sr=22016, duration=120)
-        iso_wav, _ = librosa.load(iso_dir + filename.name, sr=22016, duration=120)
+        reg_wav, _ = librosa.load(filename.path, duration=120)
+        iso_wav, _ = librosa.load(iso_dir + filename.name, duration=120)
         with open(label_dir + filename.name.split('.')[0] + '.label', 'r') as r:
             line = r.readline()
             label_list.append(str(line).split(' '))
