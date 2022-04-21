@@ -33,7 +33,7 @@ class PauseNet1(nn.Module):
 
 if __name__ == '__main__':
     #set parameters
-    num_epochs = 30
+    num_epochs = 5
     num_mfccs = 20
     hidden1_size = 100
     hidden2_size = 25
@@ -46,7 +46,7 @@ if __name__ == '__main__':
 
     # create neural network
     pause_net = PauseNet1(num_mfccs, hidden1_size, hidden2_size, out_size)
-    optimizer = optim.Adam(pause_net.parameters(), lr=0.0005)
+    optimizer = optim.Adam(pause_net.parameters(), lr=0.001)
     loss_func = nn.BCELoss()
 
     # get data
@@ -68,11 +68,9 @@ if __name__ == '__main__':
             intervals_s = np.arange(0, audio_length, step)
 
             # get each second and sample
-            for label in labels:
-                #allows me to easily find the cutoff
-                intervals_s -= 1
+            for i, label in enumerate(labels):
                 #isolate a single second
-                sec_interval = np.where(intervals_s < 0)[0]
+                sec_interval = np.where(intervals_s.astype(int) == i)[0]
                 # indexes a single second of song from MFCCs
                 song_sec = np.take(mfccs, sec_interval, axis=1)
 
