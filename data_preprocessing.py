@@ -30,9 +30,9 @@ def generate_lyrics_label():
 
 
 def zip_label_wav():
-    reg_dir = os.getcwd() + '/Model_Data/songs/vocal_reg/'
-    iso_dir = os.getcwd() + '/Model_Data/songs/vocal_iso/'
-    label_dir = os.getcwd() + '/Model_Data/lyrics/'
+    reg_dir = os.getcwd() + '/Model_Data/train/songs/vocal_reg/'
+    iso_dir = os.getcwd() + '/Model_Data/train/songs/vocal_iso/'
+    label_dir = os.getcwd() + '/Model_Data/train/lyrics/'
     reg_wav_list = []
     iso_wav_list = []
     label_list = []
