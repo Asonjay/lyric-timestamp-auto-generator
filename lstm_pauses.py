@@ -26,7 +26,6 @@ class PauseNet2(nn.Module):
     def forward(self, x):
         out, _ = self.lstm(x)
         x = self.fc1(out)
-        #x = torch.squeeze(x, 0)
         x = self.relu(x)
         x = self.sigmoid(self.fc2(x))
 
@@ -63,7 +62,7 @@ if __name__ == '__main__':
 
             # sample window of 2048 and hop size of 512 samples
             mfccs = librosa.feature.mfcc(y=song, n_mfcc=num_mfccs) #(num_mfccs, 5168)
-            mfccs = torch.unsqueeze(torch.FloatTensor(mfccs.T), 1)
+            mfccs = torch.unsqueeze(torch.FloatTensor(mfccs.T), 0)
 
             #breaks down mfccs into their time intervals
             audio_length = len(song) / sr # in seconds
@@ -72,7 +71,8 @@ if __name__ == '__main__':
 
             optimizer.zero_grad()
             pred = pause_net.forward(mfccs)
-            pred = torch.squeeze(torch.squeeze(pred, -1), -1)
+
+            pred = torch.squeeze(torch.squeeze(pred, 0), -1)
 
             # nonpause proper label is 0, pause proper label is 1
             loss = loss_func(pred, labels)
