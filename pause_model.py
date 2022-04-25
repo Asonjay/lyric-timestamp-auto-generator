@@ -37,6 +37,36 @@ class PauseNet1(nn.Module):
     return x
 
 
+# Build the neural network for classifying pauses against nonpauses
+class PauseNet1(nn.Module):
+  def __init__(self, num_mfccs, hid, out):
+    super().__init__()
+    self.sigmoid = nn.Sigmoid()
+    self.relu = nn.ReLU()
+    self.fc1 = nn.Linear(num_mfccs, hid)
+    torch.nn.init.xavier_uniform_(self.fc1.weight)
+    self.fc2 = nn.Linear(hid, hid)
+    torch.nn.init.xavier_uniform_(self.fc2.weight)
+    self.fc3 = nn.Linear(hid, hid)
+    torch.nn.init.xavier_uniform_(self.fc3.weight)
+    self.fc4 = nn.Linear(hid, hid)
+    torch.nn.init.xavier_uniform_(self.fc4.weight)
+    self.fc5 = nn.Linear(hid, out)
+    torch.nn.init.xavier_uniform_(self.fc5.weight)
+
+
+  # pass forward for nn
+  def forward(self, data):
+    x=self.relu(self.fc1(data))
+    x=self.relu(self.fc2(x))
+    x=self.relu(self.fc3(x))
+    x=self.relu(self.fc4(x))
+    x=self.sigmoid(self.fc5(x))
+
+    return x
+
+    
+
 if __name__ == '__main__':
     #set parameters
     num_epochs = 5
