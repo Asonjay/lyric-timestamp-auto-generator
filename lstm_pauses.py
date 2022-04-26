@@ -5,6 +5,7 @@ import torch.nn.functional as F
 import torch.optim as optim
 import librosa
 import numpy as np
+import random
 
 from updated_preprocessing import *
 
@@ -37,7 +38,7 @@ if __name__ == '__main__':
 
     #set parameters
     num_epochs = 5
-    num_mfccs = 20
+    num_mfccs = 13
     hidden1_size = 100
     hidden2_size = 20
     out_size = 1
@@ -54,11 +55,14 @@ if __name__ == '__main__':
 
     # Pack the label and .wav file
     iso_labels, iso_wavs, reg_wavs = zip_label_wav()
+    song_idxs = list(range(len(iso_labels)))
 
     for epoch in range(num_epochs):
+        #shuffle songs for training each epoch to prevent overfitting
+        random.shuffle(song_idxs)
 
         total_loss = 0
-        for song, labels in zip(reg_wavs, iso_labels):
+        for song, labels in zip(iso_wavs, iso_labels):
 
             # sample window of 2048 and hop size of 512 samples
             mfccs = librosa.feature.mfcc(y=song, n_mfcc=num_mfccs) #(num_mfccs, 5168)
