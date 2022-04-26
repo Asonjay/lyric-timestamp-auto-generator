@@ -57,7 +57,7 @@ if __name__ == '__main__':
 
 
     # Pack the label and .wav file
-    iso_labels, iso_wavs, reg_wavs = zip_label_wav()
+    iso_labels, reg_wavs, iso_wavs = zip_label_wav()
     song_idxs = list(range(len(iso_labels)))
 
     for epoch in range(num_epochs):
