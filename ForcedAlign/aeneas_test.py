@@ -18,8 +18,8 @@ config[gc.PPN_TASK_OS_FILE_FORMAT] = SyncMapFormat.JSON
 task = Task()
 task.configuration = config
 # configure to proper file paths for your computer
-task.audio_file_path_absolute = "foreground.mp3"
-task.text_file_path_absolute = "LoveStory.txt"
+task.audio_file_path_absolute = "ABoyNamedSue.mp3"
+task.text_file_path_absolute = "ABoyNamedSue.txt"
 task.sync_map_file_path_absolute = "try.json"
 
 # process Task
@@ -38,11 +38,8 @@ data = json.load(f)
 # Iterating through the json
 # list
 for frag in data['fragments']:
-    frag_begin = frag['begin']
     frag_end = frag['end']
-    print(frag_begin, frag_end)
-    print(frag['lines'][0])
-    print()
+    print(frag_end + ' ' + frag['lines'][0])
 
 # Closing file
 f.close()

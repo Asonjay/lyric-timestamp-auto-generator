@@ -1,0 +1,604 @@
+{
+ "fragments": [
+  {
+   "begin": "0.000",
+   "children": [],
+   "end": "2.400",
+   "id": "f000001",
+   "language": "eng",
+   "lines": [
+    "My daddy left home when I was three"
+   ]
+  },
+  {
+   "begin": "2.400",
+   "children": [],
+   "end": "13.560",
+   "id": "f000002",
+   "language": "eng",
+   "lines": [
+    "And he didn't leave much to ma and me"
+   ]
+  },
+  {
+   "begin": "13.560",
+   "children": [],
+   "end": "17.280",
+   "id": "f000003",
+   "language": "eng",
+   "lines": [
+    "Just this old guitar and an empty bottle of booze."
+   ]
+  },
+  {
+   "begin": "17.280",
+   "children": [],
+   "end": "19.840",
+   "id": "f000004",
+   "language": "eng",
+   "lines": [
+    "Now' I don't blame him cause he run and hid"
+   ]
+  },
+  {
+   "begin": "19.840",
+   "children": [],
+   "end": "22.440",
+   "id": "f000005",
+   "language": "eng",
+   "lines": [
+    "But the meanest thing that he ever did"
+   ]
+  },
+  {
+   "begin": "22.440",
+   "children": [],
+   "end": "26.240",
+   "id": "f000006",
+   "language": "eng",
+   "lines": [
+    "Was before he left' he went and named me \"Sue.\""
+   ]
+  },
+  {
+   "begin": "26.240",
+   "children": [],
+   "end": "30.120",
+   "id": "f000007",
+   "language": "eng",
+   "lines": [
+    "Well' he must o' thought that is quite a joke"
+   ]
+  },
+  {
+   "begin": "30.120",
+   "children": [],
+   "end": "32.120",
+   "id": "f000008",
+   "language": "eng",
+   "lines": [
+    "And it got a lot of laughs from a' lots of folk'"
+   ]
+  },
+  {
+   "begin": "32.120",
+   "children": [],
+   "end": "34.200",
+   "id": "f000009",
+   "language": "eng",
+   "lines": [
+    "It seems I had to fight my whole life through."
+   ]
+  },
+  {
+   "begin": "34.200",
+   "children": [],
+   "end": "35.160",
+   "id": "f000010",
+   "language": "eng",
+   "lines": [
+    "Some gal would giggle and I'd get red"
+   ]
+  },
+  {
+   "begin": "35.160",
+   "children": [],
+   "end": "37.080",
+   "id": "f000011",
+   "language": "eng",
+   "lines": [
+    "I tell ya' life ain't easy for a boy named \"Sue.\""
+   ]
+  },
+  {
+   "begin": "37.080",
+   "children": [],
+   "end": "39.080",
+   "id": "f000012",
+   "language": "eng",
+   "lines": [
+    "Well' I grew up quick and I grew up mean'"
+   ]
+  },
+  {
+   "begin": "39.080",
+   "children": [],
+   "end": "41.280",
+   "id": "f000013",
+   "language": "eng",
+   "lines": [
+    "My fist got hard and my wits got keen'"
+   ]
+  },
+  {
+   "begin": "41.280",
+   "children": [],
+   "end": "43.760",
+   "id": "f000014",
+   "language": "eng",
+   "lines": [
+    "I'd roam from town to town to hide my shame."
+   ]
+  },
+  {
+   "begin": "43.760",
+   "children": [],
+   "end": "45.200",
+   "id": "f000015",
+   "language": "eng",
+   "lines": [
+    "But I made a vow to the moon and stars"
+   ]
+  },
+  {
+   "begin": "45.200",
+   "children": [],
+   "end": "47.680",
+   "id": "f000016",
+   "language": "eng",
+   "lines": [
+    "That I'd search the honky-tonks and bars"
+   ]
+  },
+  {
+   "begin": "47.680",
+   "children": [],
+   "end": "50.440",
+   "id": "f000017",
+   "language": "eng",
+   "lines": [
+    "And kill that man who gave me that awful name."
+   ]
+  },
+  {
+   "begin": "50.440",
+   "children": [],
+   "end": "51.440",
+   "id": "f000018",
+   "language": "eng",
+   "lines": [
+    "Well' it was Gatlinburg in mid-July"
+   ]
+  },
+  {
+   "begin": "51.440",
+   "children": [],
+   "end": "54.040",
+   "id": "f000019",
+   "language": "eng",
+   "lines": [
+    "And I just hit town and my throat was dry'"
+   ]
+  },
+  {
+   "begin": "54.040",
+   "children": [],
+   "end": "55.600",
+   "id": "f000020",
+   "language": "eng",
+   "lines": [
+    "I thought I'd stop and have myself a brew."
+   ]
+  },
+  {
+   "begin": "55.600",
+   "children": [],
+   "end": "57.480",
+   "id": "f000021",
+   "language": "eng",
+   "lines": [
+    "At an old saloon on a street of mud'"
+   ]
+  },
+  {
+   "begin": "57.480",
+   "children": [],
+   "end": "58.360",
+   "id": "f000022",
+   "language": "eng",
+   "lines": [
+    "There at a table' dealing stud'"
+   ]
+  },
+  {
+   "begin": "58.360",
+   "children": [],
+   "end": "59.240",
+   "id": "f000023",
+   "language": "eng",
+   "lines": [
+    "Sat the dirty' mangy dog that named me \"Sue.\""
+   ]
+  },
+  {
+   "begin": "59.240",
+   "children": [],
+   "end": "61.520",
+   "id": "f000024",
+   "language": "eng",
+   "lines": [
+    "Well' I knew that snake was my own sweet dad"
+   ]
+  },
+  {
+   "begin": "61.520",
+   "children": [],
+   "end": "62.640",
+   "id": "f000025",
+   "language": "eng",
+   "lines": [
+    "From a worn-out picture that my mother'd had'"
+   ]
+  },
+  {
+   "begin": "62.640",
+   "children": [],
+   "end": "64.040",
+   "id": "f000026",
+   "language": "eng",
+   "lines": [
+    "And I knew that scar on his cheek and his evil eye."
+   ]
+  },
+  {
+   "begin": "64.040",
+   "children": [],
+   "end": "66.160",
+   "id": "f000027",
+   "language": "eng",
+   "lines": [
+    "He was big and bent and gray and old'"
+   ]
+  },
+  {
+   "begin": "66.160",
+   "children": [],
+   "end": "68.320",
+   "id": "f000028",
+   "language": "eng",
+   "lines": [
+    "And I looked at him and my blood ran cold"
+   ]
+  },
+  {
+   "begin": "68.320",
+   "children": [],
+   "end": "69.600",
+   "id": "f000029",
+   "language": "eng",
+   "lines": [
+    "And I said: \"My name is 'Sue!' How do you do!"
+   ]
+  },
+  {
+   "begin": "69.600",
+   "children": [],
+   "end": "70.920",
+   "id": "f000030",
+   "language": "eng",
+   "lines": [
+    "Now you're gonna die!!\""
+   ]
+  },
+  {
+   "begin": "70.920",
+   "children": [],
+   "end": "73.240",
+   "id": "f000031",
+   "language": "eng",
+   "lines": [
+    "Well' I hit him hard right between the eyes"
+   ]
+  },
+  {
+   "begin": "73.240",
+   "children": [],
+   "end": "74.520",
+   "id": "f000032",
+   "language": "eng",
+   "lines": [
+    "And he went down' but to my surprise'"
+   ]
+  },
+  {
+   "begin": "74.520",
+   "children": [],
+   "end": "77.040",
+   "id": "f000033",
+   "language": "eng",
+   "lines": [
+    "He come up with a knife and cut off a piece of my ear."
+   ]
+  },
+  {
+   "begin": "77.040",
+   "children": [],
+   "end": "78.040",
+   "id": "f000034",
+   "language": "eng",
+   "lines": [
+    "But I busted a chair right across his teeth"
+   ]
+  },
+  {
+   "begin": "78.040",
+   "children": [],
+   "end": "78.520",
+   "id": "f000035",
+   "language": "eng",
+   "lines": [
+    "And we crashed through the wall and into the street"
+   ]
+  },
+  {
+   "begin": "78.520",
+   "children": [],
+   "end": "80.560",
+   "id": "f000036",
+   "language": "eng",
+   "lines": [
+    "Kicking and a' gouging in the mud and the blood and the beer."
+   ]
+  },
+  {
+   "begin": "80.560",
+   "children": [],
+   "end": "81.520",
+   "id": "f000037",
+   "language": "eng",
+   "lines": [
+    "I tell ya' I've fought tougher men"
+   ]
+  },
+  {
+   "begin": "81.520",
+   "children": [],
+   "end": "82.240",
+   "id": "f000038",
+   "language": "eng",
+   "lines": [
+    "But I really can't remember when'"
+   ]
+  },
+  {
+   "begin": "82.240",
+   "children": [],
+   "end": "83.200",
+   "id": "f000039",
+   "language": "eng",
+   "lines": [
+    "He kicked like a mule and he bit like a crocodile."
+   ]
+  },
+  {
+   "begin": "83.200",
+   "children": [],
+   "end": "84.400",
+   "id": "f000040",
+   "language": "eng",
+   "lines": [
+    "I heard him laugh and then I heard him cuss'"
+   ]
+  },
+  {
+   "begin": "84.400",
+   "children": [],
+   "end": "87.240",
+   "id": "f000041",
+   "language": "eng",
+   "lines": [
+    "He went for his gun and I pulled mine first'"
+   ]
+  },
+  {
+   "begin": "87.240",
+   "children": [],
+   "end": "88.280",
+   "id": "f000042",
+   "language": "eng",
+   "lines": [
+    "He stood there lookin' at me and I saw him smile."
+   ]
+  },
+  {
+   "begin": "88.280",
+   "children": [],
+   "end": "89.160",
+   "id": "f000043",
+   "language": "eng",
+   "lines": [
+    "And he said: \"Son' this world is rough"
+   ]
+  },
+  {
+   "begin": "89.160",
+   "children": [],
+   "end": "90.160",
+   "id": "f000044",
+   "language": "eng",
+   "lines": [
+    "And if a man's gonna make it' he's gotta be tough"
+   ]
+  },
+  {
+   "begin": "90.160",
+   "children": [],
+   "end": "91.280",
+   "id": "f000045",
+   "language": "eng",
+   "lines": [
+    "And I knew I wouldn't be there to help ya along."
+   ]
+  },
+  {
+   "begin": "91.280",
+   "children": [],
+   "end": "92.520",
+   "id": "f000046",
+   "language": "eng",
+   "lines": [
+    "So I give ya that name and I said goodbye"
+   ]
+  },
+  {
+   "begin": "92.520",
+   "children": [],
+   "end": "93.320",
+   "id": "f000047",
+   "language": "eng",
+   "lines": [
+    "I knew you'd have get to tough or die"
+   ]
+  },
+  {
+   "begin": "93.320",
+   "children": [],
+   "end": "95.560",
+   "id": "f000048",
+   "language": "eng",
+   "lines": [
+    "And it's the name that helped to make you strong.\""
+   ]
+  },
+  {
+   "begin": "95.560",
+   "children": [],
+   "end": "97.360",
+   "id": "f000049",
+   "language": "eng",
+   "lines": [
+    "He said: \"Now you just fought one hell of a fight"
+   ]
+  },
+  {
+   "begin": "97.360",
+   "children": [],
+   "end": "98.640",
+   "id": "f000050",
+   "language": "eng",
+   "lines": [
+    "And I know you hate me' and you got the right"
+   ]
+  },
+  {
+   "begin": "98.640",
+   "children": [],
+   "end": "101.440",
+   "id": "f000051",
+   "language": "eng",
+   "lines": [
+    "To kill me now' and I wouldn't blame you if you do."
+   ]
+  },
+  {
+   "begin": "101.440",
+   "children": [],
+   "end": "102.920",
+   "id": "f000052",
+   "language": "eng",
+   "lines": [
+    "But ya ought to thank me' before I die'"
+   ]
+  },
+  {
+   "begin": "102.920",
+   "children": [],
+   "end": "105.360",
+   "id": "f000053",
+   "language": "eng",
+   "lines": [
+    "For the gravel in ya guts and the spit in ya eye"
+   ]
+  },
+  {
+   "begin": "105.360",
+   "children": [],
+   "end": "109.640",
+   "id": "f000054",
+   "language": "eng",
+   "lines": [
+    "Cause I'm the son-of-a-***** that named you \"Sue.'\""
+   ]
+  },
+  {
+   "begin": "109.640",
+   "children": [],
+   "end": "113.320",
+   "id": "f000055",
+   "language": "eng",
+   "lines": [
+    "I got all choked up and I threw down my gun"
+   ]
+  },
+  {
+   "begin": "113.320",
+   "children": [],
+   "end": "115.360",
+   "id": "f000056",
+   "language": "eng",
+   "lines": [
+    "And I called him my pa' and he called me his son'"
+   ]
+  },
+  {
+   "begin": "115.360",
+   "children": [],
+   "end": "117.360",
+   "id": "f000057",
+   "language": "eng",
+   "lines": [
+    "And I came away with a different point of view."
+   ]
+  },
+  {
+   "begin": "117.360",
+   "children": [],
+   "end": "119.040",
+   "id": "f000058",
+   "language": "eng",
+   "lines": [
+    "And I think about him' now and then'"
+   ]
+  },
+  {
+   "begin": "119.040",
+   "children": [],
+   "end": "122.360",
+   "id": "f000059",
+   "language": "eng",
+   "lines": [
+    "Every time I try and every time I win'"
+   ]
+  },
+  {
+   "begin": "122.360",
+   "children": [],
+   "end": "124.960",
+   "id": "f000060",
+   "language": "eng",
+   "lines": [
+    "And if I ever have a son' I think I'm gonna name him"
+   ]
+  }
+ ]
+}
