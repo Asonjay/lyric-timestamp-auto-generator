@@ -80,7 +80,7 @@ def model_accuracy(net, eval_wavs, eval_labels):
         output_str += ";\nRecall (fraction of true positives predicted correctly): %i / %i = %f" % (num_pos_correct, num_gold, rec)
         output_str += ";\nF1 (harmonic mean of precision and recall): %f;\n" % f1
         print(output_str)
-        print("++++++++++++++++++++++++++++++++++++")
+    print("++++++++++++++++++++++++++++++++++++")
 
 
 if __name__ == '__main__':
